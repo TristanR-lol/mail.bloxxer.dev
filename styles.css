@@ -116,7 +116,7 @@ body {
     color: var(--fonts-promenent);
 }
 
-#SendButton {
+#SendButton,#LoginButton {
     margin-top: 10px;
     border: none;
     border-radius: 10rem;
@@ -125,7 +125,7 @@ body {
     color: var(--fonts-vague);
 }
 
-#SendButton:hover {
+#SendButton:hover,#LoginButton:hover {
     color: var(--fonts-promenent);
 }
 
