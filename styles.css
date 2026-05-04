@@ -1,0 +1,138 @@
+:root {
+    --background: hsl(0, 0%, 20%);
+    --topbar-background: hsl(0, 0%, 15%);
+    --topbar-lightened: hsl(0, 0%, 17%);
+    --frame-background: hsl(0, 0%, 15%);
+    --frame-lightened: hsl(0, 0%, 17%);
+    --fonts-promenent: hsl(0, 12%, 97%);
+    --fonts-vague: hsl(0, 0%, 76%);
+    --fontsize: 2.5vh;
+    --fontsize-large: 2.7vh;
+}
+
+/* Background / Body */
+
+body {
+    background-color: var(--background);
+}
+
+/* Topbar Elements */
+
+.Topbar {
+    display: flex;
+    position: fixed;
+
+    height: 10%;
+    width: 100%;
+
+    margin: 0%;
+    padding-left: 2%;
+
+    top: 0%;
+    left: 0%;
+
+    align-items: center;
+
+    background-color: var(--topbar-background);
+    border-bottom-left-radius: 2rem;
+
+    transition: 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.Topbar:hover {
+    height: 12%;
+    background-color: var(--topbar-lightened);
+    color: var(--fonts-promenent);
+    font-size: var(--fontsize-large);
+}
+
+/* Email Frame */
+
+.Email {
+    display: flex;
+    position: fixed;
+
+    flex-direction: column;
+
+    height: 65%;
+    width: 65%;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 2%;
+
+    background-color: var(--frame-background);
+    color: var(--fonts-vague);
+    border-radius: 2rem;
+
+    transition: 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.Email:hover {
+    background-color: var(--frame-lightened);
+    color: var(--fonts-promenent);
+    font-size: var(--fontsize-large);
+    border-radius: 1.5rem;
+    
+    height: 69%;
+    width: 69%;
+}
+
+.Header {
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.HeaderContent {
+    background-color: var(--background);
+    width: 100%;
+    color: var(--fonts-vague);
+    border: none;
+    border-radius: 10rem;
+    margin-bottom: 10px;
+}
+
+.HeaderContent:hover {
+    color: var(--fonts-promenent);
+}
+
+.MessageBody {
+    width: 100%;
+    height: 90%;
+    display: block;
+    background-color: var(--background);
+    border-radius: 1.5rem;
+    color: var(--fonts-vague);
+    border: none;
+    padding: 1%;
+    font-family: "Google Sans";
+    font-size: var(--fontsize);
+    resize: none;
+}
+
+.MessageBody:hover {
+    color: var(--fonts-promenent);
+}
+
+#SendButton {
+    margin-top: 10px;
+    border: none;
+    border-radius: 10rem;
+    background-color: var(--background);
+    width: 100%;
+    color: var(--fonts-vague);
+}
+
+#SendButton:hover {
+    color: var(--fonts-promenent);
+}
+
+/* General Elements */
+
+div {
+    font-family: "Google Sans";
+    color: var(--fonts-vague);
+    font-size: var(--fontsize);
+}
