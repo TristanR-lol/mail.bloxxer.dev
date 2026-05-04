@@ -19,7 +19,6 @@ document.getElementById('SendButton').addEventListener('click', async () => {
     
     if (result.success) {
       alert('Email sent! ✓');
-      // Clear the form
       document.getElementById('ToHeader').value = '';
       document.getElementById('SubjectHeader').value = '';
       document.querySelector('.MessageBody').innerHTML = '';
