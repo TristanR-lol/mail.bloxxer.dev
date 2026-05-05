@@ -11,9 +11,14 @@ export default async function handler(req, res) {
   try {
     const { data, error } = await supabase
       .from('users')
-      .select('NewEmail')
+      .select('newEmail')
       .eq('id', userId)
       .single()
+
+
+    if (error && error.code === 'PGRST116') {
+      return res.status(500).json({ Response: "Invalid Login" })
+    }
 
     if (error) return res.status(400).json({ error: error.message })
 

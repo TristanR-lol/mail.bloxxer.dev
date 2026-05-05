@@ -33,14 +33,13 @@ document.getElementById('LoginButton').addEventListener('click', async () => {
       localStorage.setItem('userEmail', result.user.email)
       localStorage.setItem('userId', result.user.id)
 
-      // Fetch their custom email from Supabase
       const userProfile = await fetch('/api/get-user-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId: result.user.id })
       }).then(r => r.json())
 
-      localStorage.setItem('fromEmail', userProfile.newEmail)
+      localStorage.setItem('fromEmail', userProfile.newemail)
 
       document.getElementById('LoginPopup').style.display = 'none'
       document.getElementById('Email').style.display = 'flex'
