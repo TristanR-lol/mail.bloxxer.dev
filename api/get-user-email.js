@@ -17,12 +17,12 @@ export default async function handler(req, res) {
 
 
     if (error && error.code === 'PGRST116') {
-      return res.status(500).json({ Response: "Invalid Login" })
+      return res.status(400).json({ error: "Invalid Login" })
     }
 
     if (error) return res.status(400).json({ error: error.message })
 
-    res.status(200).json({ newEmail: data.NewEmail })
+    res.status(200).json({ newEmail: data.newemail })
   } catch (error) {
     res.status(500).json({ error: error.message })
   }
