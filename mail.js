@@ -28,7 +28,7 @@ document.getElementById('LoginButton').addEventListener('click', async () => {
 
     const result = await response.json()
 
-    if (result.session) {
+    if (result.session && result.error == null) {
       localStorage.setItem('sessionToken', result.session.access_token)
       localStorage.setItem('userEmail', result.user.email)
       localStorage.setItem('userId', result.user.id)
