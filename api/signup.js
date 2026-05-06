@@ -15,6 +15,10 @@ export default async function handler(req, res) {
   try {
     const { data, error } = await supabase.auth.signUp({ email, password })
 
+    if (error == `duplicate key value violates unique constraint "users_pkey"`) {
+      error = "Account already exists."
+    }
+
     if (error) return res.status(400).json({ error: error.message })
     const { error: dbError } = await supabase
       .from('users')
