@@ -2,31 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <!-- Import Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
-
     <script src="mail.js" defer></script>
     <link href="styles.css" rel="stylesheet">
     <link type="image/x-icon" rel="icon" href="images/favicon.ico">
     <title>Mail - Bloxxer.Dev</title>
 </head>
 <body>
-    
-    <!-- Topbar -->
-    <div class="Topbar">
-        Mail.Bloxxer.Dev
-    </div>
-
-    <!-- Email Frame -->
+    <div class="Topbar">Mail.Bloxxer.Dev</div>
     <div class="Email" id="Email">
         <div class="AreaHeaders">
             <div class="Header">
                 <input id="ToHeader" class="HeaderContent" type="text" placeholder="To">
             </div>
-
             <div class="Header">
                 <input id="SubjectHeader" class="HeaderContent" type="text" placeholder="Subject">
             </div>
@@ -34,10 +24,9 @@
         <textarea id="MessageBody" class="MessageBody" placeholder="Start typing..."></textarea>
         <button id="SendButton">Send!</button>
     </div>
-
-    <!-- Login Popup -->
     <div class="Email" id="LoginPopup">
         Log in to send emails.
+        <p></p>
         <div class="Header">
             <input id="EmailHeader" class="HeaderContent" type="email" placeholder="Email">
         </div>
@@ -45,7 +34,20 @@
             <input id="PasswordHeader" class="HeaderContent" type="password" placeholder="Password">
         </div>
         <button id="LoginButton">Login</button>
+        <p></p>
+        Or, Sign Up.
+        <p></p>
+        <div class="Header">
+            <input id="SignupEmailHeader" class="HeaderContent" type="email" placeholder="Email">
+        </div>
+        <div class="Header">
+            <input id="SignupPasswordHeader" class="HeaderContent" type="password" placeholder="Password">
+            <input id="SignupPasswordConfirm" class="HeaderContent" type="password" placeholder="Type it again">
+        </div>
+        <div class="Header">
+            <input id="SignupNewEmailHeader" class="HeaderContent" type="email" placeholder="New @bloxxer.dev email">
+        </div>
+        <button id="SignupButton">Sign Up!</button>
     </div>
-
 </body>
 </html>
