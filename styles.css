@@ -116,7 +116,7 @@ body {
     color: var(--fonts-promenent);
 }
 
-#SendButton,#LoginButton {
+#SendButton,#LoginButton,#SignupButton {
     margin-top: 10px;
     border: none;
     border-radius: 10rem;
